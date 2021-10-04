@@ -11,6 +11,9 @@ npm install
 npm run devStart
 ```
 
+Create
+> npm init
+
 ### MongoDB Atlas
 
 https://cloud.mongodb.com
