@@ -1,21 +1,33 @@
 import {
   useQuery,
 } from "@apollo/client";
-
-import { getBooksQuery } from "../queries/queries"
+import { useState } from "react";
+import { getBooksQuery } from "../queries/queries";
+import BookDetails from "./BookDetails";
 
 
 function BookList() {
+  const [selectedId, setSelectedId] = useState('');
 
   const { loading, error, data } = useQuery(getBooksQuery);
+
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error :(</p>;
 
-  return data.books.map(({ id, name }) => (
+  const bookList = () => {
+    return data.books.map(({ id, name }) => (
+      <li key={id} onClick={() => { setSelectedId(id) }}>{name}</li>
+    ));
+  };
+
+  return (
     <div>
-      <li key={id}>{name}</li>
+      <ul id="book-list">
+        {bookList()}
+      </ul>
+      {selectedId ? <BookDetails bookId={selectedId} /> : <p>Select a book</p>}
     </div>
-  ));
-}
+  );
+};
 
 export default BookList;
