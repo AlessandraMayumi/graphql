@@ -1,4 +1,4 @@
-body {
+body{
   background: #eee;
 }
 
@@ -15,7 +15,8 @@ body {
 }
 
 #book-list{
-  padding: 0px;
+  padding: 0;
+  width: 60%;
 }
 
 #book-list li{
@@ -23,10 +24,10 @@ body {
   margin: 12px;
   padding: 10px;
   border-radius: 4px;
-  border: 1px solid #880e4f;
-  box-shadow: 1px 2px 3px rgba(0,0,0,0,3);
+  border: 1px solid #880E4F;
+  box-shadow: 1px 2px 3px rgba(0,0,0,0.3);
   cursor: pointer;
-  color: #880e4f;
+  color: #880E4F;
 }
 
 form{
@@ -41,6 +42,7 @@ form{
 form .field{
   display: grid;
   grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
 }
 
 form label{
@@ -48,8 +50,8 @@ form label{
   padding: 6px;
 }
 
-form select, form input{
-  margin: 4px;
+form input, form select{
+  margin: 4px 0;
   padding: 6px;
   box-sizing: border-box;
 }
@@ -57,7 +59,7 @@ form select, form input{
 form button{
   color: #fff;
   font-size: 2em;
-  background: #ad1457;
+  background: #AD1457;
   border: 0;
   padding: 0 10px;
   border-radius: 50%;
@@ -73,10 +75,10 @@ form button{
   right: 0;
   width: 40%;
   height: 100%;
-  background: #ad1457;
+  background: #AD1457;
   padding: 30px;
   overflow: auto;
-  box-shadow: -2px -3px 5px rgba(0,0,0,0,3);
+  box-shadow: -2px -3px 5px rgba(0,0,0,0.3);
   box-sizing: border-box;
   color: #fff;
 }
